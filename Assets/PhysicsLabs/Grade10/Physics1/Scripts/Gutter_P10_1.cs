@@ -23,7 +23,6 @@ public class Gutter_P10_1 : MonoBehaviour
 
     [Header("UI")]
     [SerializeField] private Text stopwatchDisplay;
-    [SerializeField] private GameObject startButton;
 
     [Header("Events")]
     public UnityEvent OnTrajectoryStart;
@@ -40,6 +39,14 @@ public class Gutter_P10_1 : MonoBehaviour
             {
                 BallEntered(ball);
             }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.TryGetComponent<Ball_P10_1>(out Ball_P10_1 ball))
+        {
+            BallExited(ball);
+        }
     }
 
     private void CylinderEntered(Cylinder_P10_1 cylinder)
@@ -69,6 +76,8 @@ public class Gutter_P10_1 : MonoBehaviour
         cylinder.Tr.rotation = cylinderLimiter.transform.rotation;
 
         Cylinder.Events.OnCollisionEntered.AddListener(CylinderHit);
+
+        Cylinder.GetComponent<ConfigurableJoint>().connectedBody = rb;
     }
 
     private void MakeCylinderKinematic(SelectExitEventArgs arg0)
@@ -78,29 +87,47 @@ public class Gutter_P10_1 : MonoBehaviour
 
     private void BallEntered(Ball_P10_1 ball)
     {
-        /*Ball = ball;
-        ballLimiter.LimitedTr = Ball.Tr;
-        ball.Tr.SetParent(ballLimiter.transform);
+        Ball = ball;
+        Ball.Interactable.selectExited.AddListener(StartTrajectory);
+    }
 
-        ballLimiter.enabled = true;*/
+    private void BallExited(Ball_P10_1 ball)
+    {
+        /*if(ball == Ball)
+        {
+            Ball.Interactable.selectExited.RemoveListener(StartTrajectory);
+            StopTrajectory();
+
+            Ball = null;
+        }*/
     }
 
 
     private float passedTime;
     private Coroutine stopwatchCoroutine;
 
-    public void StartTrajectory()
+    public void StartTrajectory(SelectExitEventArgs args)
     {
         if (Ball == null || Cylinder == null)
             return;
 
-        Ball.Tr.localPosition = ballLimiter.MinValues;
-        Ball.Rb.isKinematic = false;
-        Ball.Rb.velocity = Vector3.zero;
+        StopStopwatch();
 
         stopwatchCoroutine = StartCoroutine(Stopwatch());
-        OnTrajectoryStart.Invoke();
         Cylinder.Events.OnTriggerEntered.AddListener(BallTriggerCylinder);
+    }
+
+    private void StopStopwatch()
+    {
+        if (stopwatchCoroutine != null)
+            StopCoroutine(stopwatchCoroutine);
+    }
+
+    private void StopTrajectory()
+    {
+        Cylinder.Events.OnTriggerEntered.RemoveListener(BallTriggerCylinder);
+
+        StopStopwatch();
     }
 
     private IEnumerator Stopwatch()
@@ -129,10 +156,7 @@ public class Gutter_P10_1 : MonoBehaviour
     {
         if (collider.TryGetComponent<Ball_P10_1>(out Ball_P10_1 ball))
         {
-            Cylinder.Events.OnTriggerEntered.RemoveListener(BallTriggerCylinder);
-            startButton.SetActive(true);
-
-            StopCoroutine(stopwatchCoroutine);
+            StopTrajectory();
 
             var distance = (float)(int)(cylinderDistanceDisplayer.MultiplyedHigh * 1000) / 1000 + "ì";
             var time = (float)(int)(passedTime * 1000) / 1000 + "c";

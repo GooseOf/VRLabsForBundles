@@ -95,13 +95,7 @@ public class Gutter_P10_1 : MonoBehaviour
 
     private void BallExited(Ball_P10_1 ball)
     {
-        /*if(ball == Ball)
-        {
-            Ball.Interactable.selectExited.RemoveListener(StartTrajectory);
-            StopTrajectory();
-
-            Ball = null;
-        }*/
+        
     }
 
 
@@ -117,6 +111,7 @@ public class Gutter_P10_1 : MonoBehaviour
 
         stopwatchCoroutine = StartCoroutine(Stopwatch());
         Cylinder.Events.OnTriggerEntered.AddListener(BallTriggerCylinder);
+        Ball.Interactable.selectExited.RemoveListener(StartTrajectory);
     }
 
     private void StopStopwatch()

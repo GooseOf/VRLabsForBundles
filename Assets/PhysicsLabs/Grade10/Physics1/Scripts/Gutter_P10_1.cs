@@ -59,8 +59,10 @@ public class Gutter_P10_1 : MonoBehaviour
         cylinderLimiter.LimitedTr = cylinder.transform;
         cylinder.Tr.SetParent(cylinderLimiter.transform);
         cylinderLimiter.enabled = true;
-
-        cylinderDistanceDisplayer.TrB = Cylinder.TrToCheckDistance;
+        if (cylinderDistanceDisplayer != null)
+        {
+            cylinderDistanceDisplayer.TrB = Cylinder.TrToCheckDistance;
+        }
 
 
         handFollower.TrToMove = cylinder.Tr;
@@ -136,7 +138,10 @@ public class Gutter_P10_1 : MonoBehaviour
         while (true)
         {
             passedTime += Time.deltaTime;
-            stopwatchDisplay.text = (float)(int)(passedTime * 1000) / 1000 + "Ñ";
+            if (stopwatchDisplay != null)
+            {
+                stopwatchDisplay.text = (float)(int)(passedTime * 1000) / 1000 + "Ñ";
+            }            
             yield return null;
         }
     }
@@ -157,16 +162,24 @@ public class Gutter_P10_1 : MonoBehaviour
         if (collider.TryGetComponent<Ball_P10_1>(out Ball_P10_1 ball))
         {
             StopTrajectory();
-
-            var distance = (float)(int)(cylinderDistanceDisplayer.MultiplyedHigh * 1000) / 1000 + "ì";
-            var time = (float)(int)(passedTime * 1000) / 1000 + "c";
-            Table.AddRow(new List<string>() { distance, time });
+            if (cylinderDistanceDisplayer != null)
+            {
+                var distance = (float)(int)(cylinderDistanceDisplayer.MultiplyedHigh * 1000) / 1000 + "ì";
+                var time = (float)(int)(passedTime * 1000) / 1000 + "c";
+                Table.AddRow(new List<string>() { distance, time });
+            }            
         }
     }
 
     public void OnCylinderSliderValueChanged()
     {
-        cylinderDistanceDisplayer.ShowHigh();
-        ballLimiter.MaxValues = (cylinderLimiter.MinValues + cylinderLimiter.Difference * cylinderSlider.Value) + ballOffsetCylinder;
+        if(cylinderDistanceDisplayer != null)
+        {
+            cylinderDistanceDisplayer.ShowHigh();
+        }
+        if (ballLimiter != null)
+        {
+            ballLimiter.MaxValues = (cylinderLimiter.MinValues + cylinderLimiter.Difference * cylinderSlider.Value) + ballOffsetCylinder;
+        }        
     }
 }

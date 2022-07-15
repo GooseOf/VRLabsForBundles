@@ -18,12 +18,12 @@ ModelImporter:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Oregon_High_School
-    second: {fileID: 2800000, guid: 3baff4c4c545e1a44a4fa5f44da2cdbc, type: 3}
+    second: {fileID: 2800000, guid: 2c0ffe17bcaa53c49a52d0c4a20bcf2e, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Trees_transparent
-    second: {fileID: 2800000, guid: aa3bb84a981e674408684812516b9eec, type: 3}
+    second: {fileID: 2800000, guid: 258fad0dc19f6f648be531453df7cf25, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0

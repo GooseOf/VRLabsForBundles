@@ -31,6 +31,7 @@ public class Table : MonoBehaviour
     [SerializeField] private TableRow rowSample;
     [SerializeField] private Transform rowsParent;
 
+    public static int RowsCount { get { return Instance.rows.Count; } }
     public RowAddedEvent OnRowAdded { get; private set; } = new RowAddedEvent();
 
     public static void AddRow(List<string> columns)

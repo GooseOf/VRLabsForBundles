@@ -105,12 +105,22 @@ public class Gutter_P10_1 : MonoBehaviour
         }
     }
 
-
+    private Coroutine accelerationCoroutine;
+    private IEnumerator AccelerateBall()
+    {
+        while (true)
+        {
+            //Ball.Rb.AddForce(transform.right * 6 * Time.deltaTime);
+            yield return null;
+        }
+    }
 
     public void StartTrajectory(SelectExitEventArgs args)
     {
         if (Ball == null || Cylinder == null)
             return;
+
+        accelerationCoroutine = StartCoroutine(AccelerateBall());
 
         Cylinder.Events.OnTriggerEntered.AddListener(BallTriggerCylinder);
         stopwatch.StopWatchReset();
@@ -129,6 +139,9 @@ public class Gutter_P10_1 : MonoBehaviour
         if (Cylinder != null)
             Cylinder.Events.OnTriggerEntered.RemoveListener(BallTriggerCylinder);
         StopStopwatch();
+
+        if(accelerationCoroutine != null)
+            StopCoroutine(accelerationCoroutine);
 
         OnTrajectoryStop.Invoke();
     }

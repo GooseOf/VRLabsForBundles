@@ -42,7 +42,7 @@ public class TrBPositionFollowEnabler : MonoBehaviour
     }
     private void AddRowToTable()
     {
-        double time = Math.Round(stopwatch.time, 2);
+        double time = Math.Round(stopwatch.MeasuredTime, 2);
         double High = Math.Round(highDisplay.High, 3);
         double Length = Math.Round(lengthDisplay.Length, 3);
         List<string> columns = new List<string>() { High + "ì", time + "c", Length + "ì" };

@@ -13,8 +13,9 @@ public class Gutter_P10_1 : MonoBehaviour
     [SerializeField] private TranslateLimiter cylinderLimiter;
     [SerializeField] private DistanceDisplayer cylinderDistanceDisplayer;
     [SerializeField] private FollowHandByAxis handFollower;
-    [SerializeField] private UnityEvent OnBallHitCylinder;
     public Cylinder_P10_1 Cylinder { get; set; }
+
+    public bool AcceptCylinder { get; set; }
     
     [Header("Ball")]
     [SerializeField] private TranslateLimiter ballLimiter;
@@ -22,17 +23,21 @@ public class Gutter_P10_1 : MonoBehaviour
     public Ball_P10_1 Ball { get; set; }
 
     [Header("UI")]
-    [SerializeField] private Text stopwatchDisplay;
+    [SerializeField] private Stopwatch stopwatch;
 
     [Header("Events")]
     public UnityEvent OnTrajectoryStart;
+    public UnityEvent OnTrajectoryStop;
+    public UnityEvent OnCylinderHit;
+    public UnityEvent OnCylinderPlaced;
 
     private void OnTriggerEnter(Collider other)
     {
-        if (Cylinder == null)
+        if (Cylinder == null && AcceptCylinder)
             if (other.TryGetComponent<Cylinder_P10_1>(out Cylinder_P10_1 cylinder))
             {
                 CylinderEntered(cylinder);
+                OnCylinderPlaced.Invoke();
             }
         if (Ball == null)
             if (other.TryGetComponent<Ball_P10_1>(out Ball_P10_1 ball))
@@ -59,10 +64,8 @@ public class Gutter_P10_1 : MonoBehaviour
         cylinderLimiter.LimitedTr = cylinder.transform;
         cylinder.Tr.SetParent(cylinderLimiter.transform);
         cylinderLimiter.enabled = true;
-        if (cylinderDistanceDisplayer != null)
-        {
-            cylinderDistanceDisplayer.TrB = Cylinder.TrToCheckDistance;
-        }
+
+        cylinderDistanceDisplayer.TrB = Cylinder.TrToCheckDistance;
 
 
         handFollower.TrToMove = cylinder.Tr;
@@ -74,10 +77,9 @@ public class Gutter_P10_1 : MonoBehaviour
         cylinder.Interactable.trackPosition = false;
 
         cylinder.Rb.constraints = RigidbodyConstraints.FreezeRotation;
+        cylinder.Rb.isKinematic = true;
         cylinder.Interactable.selectExited.AddListener(MakeCylinderKinematic);
         cylinder.Tr.rotation = cylinderLimiter.transform.rotation;
-
-        Cylinder.Events.OnCollisionEntered.AddListener(CylinderHit);
 
         Cylinder.GetComponent<ConfigurableJoint>().connectedBody = rb;
 
@@ -103,61 +105,53 @@ public class Gutter_P10_1 : MonoBehaviour
 
     private void BallExited(Ball_P10_1 ball)
     {
-        
+        if (Ball != null)
+        {
+            Ball.Interactable.selectExited.RemoveListener(StartTrajectory);
+            StopTrajectory();
+            Ball = null;
+        }
     }
 
-
-    private float passedTime;
-    private Coroutine stopwatchCoroutine;
+    private Coroutine accelerationCoroutine;
+    private IEnumerator AccelerateBall()
+    {
+        while (true)
+        {
+            //Ball.Rb.AddForce(transform.right * 6 * Time.deltaTime);
+            yield return null;
+        }
+    }
 
     public void StartTrajectory(SelectExitEventArgs args)
     {
         if (Ball == null || Cylinder == null)
             return;
 
-        StopStopwatch();
+        accelerationCoroutine = StartCoroutine(AccelerateBall());
 
-        stopwatchCoroutine = StartCoroutine(Stopwatch());
         Cylinder.Events.OnTriggerEntered.AddListener(BallTriggerCylinder);
-        Ball.Interactable.selectExited.RemoveListener(StartTrajectory);
+        stopwatch.StopWatchReset();
+        stopwatch.StopWatchStart();
+
+        OnTrajectoryStart.Invoke();
     }
 
     private void StopStopwatch()
     {
-        if (stopwatchCoroutine != null)
-            StopCoroutine(stopwatchCoroutine);
+        stopwatch.StopWatchStop();
     }
 
     private void StopTrajectory()
     {
-        Cylinder.Events.OnTriggerEntered.RemoveListener(BallTriggerCylinder);
-
+        if (Cylinder != null)
+            Cylinder.Events.OnTriggerEntered.RemoveListener(BallTriggerCylinder);
         StopStopwatch();
-    }
 
-    private IEnumerator Stopwatch()
-    {
-        passedTime = 0;
-        while (true)
-        {
-            passedTime += Time.deltaTime;
-            if (stopwatchDisplay != null)
-            {
-                stopwatchDisplay.text = (float)(int)(passedTime * 1000) / 1000 + "Ñ";
-            }            
-            yield return null;
-        }
-    }
+        if(accelerationCoroutine != null)
+            StopCoroutine(accelerationCoroutine);
 
-    private void CylinderHit(Collider collider)
-    {
-        if (collider.attachedRigidbody != null)
-        {
-            if (collider.attachedRigidbody.TryGetComponent<Ball_P10_1>(out Ball_P10_1 ball))
-            {
-                OnBallHitCylinder.Invoke();
-            }
-        }
+        OnTrajectoryStop.Invoke();
     }
 
     public void BallTriggerCylinder(Collider collider)
@@ -165,24 +159,18 @@ public class Gutter_P10_1 : MonoBehaviour
         if (collider.TryGetComponent<Ball_P10_1>(out Ball_P10_1 ball))
         {
             StopTrajectory();
-            if (cylinderDistanceDisplayer != null)
-            {
-                var distance = (float)(int)(cylinderDistanceDisplayer.MultiplyedHigh * 1000) / 1000 + "ì";
-                var time = (float)(int)(passedTime * 1000) / 1000 + "c";
-                Table.AddRow(new List<string>() { distance, time });
-            }            
+
+            var distance = (float)(int)(cylinderDistanceDisplayer.MultiplyedHigh * 1000) / 1000 + "ì";
+            var time = stopwatch.GetStringTime();
+            Table.AddRow(new List<string>() { Table.RowsCount + "", distance, time });
+
+            OnCylinderHit.Invoke();
         }
     }
 
     public void OnCylinderSliderValueChanged()
     {
-        if(cylinderDistanceDisplayer != null)
-        {
-            cylinderDistanceDisplayer.ShowHigh();
-        }
-        if (ballLimiter != null)
-        {
-            ballLimiter.MaxValues = (cylinderLimiter.MinValues + cylinderLimiter.Difference * cylinderSlider.Value) + ballOffsetCylinder;
-        }        
+        cylinderDistanceDisplayer.ShowHigh();
+        ballLimiter.MaxValues = (cylinderLimiter.MinValues + cylinderLimiter.Difference * cylinderSlider.Value) + ballOffsetCylinder;
     }
 }

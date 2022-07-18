@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
+using TMPro;
 
 [Serializable]
 public class Tip
@@ -37,7 +38,7 @@ public class Tips : MonoBehaviour
 
     public Tip[] tips;
 
-    [SerializeField] private Text display;
+    [SerializeField] private TextMeshProUGUI display;
     [SerializeField] private AudioSource audioSource;
 
     private int currentTaskIndex = 0;
@@ -144,7 +145,7 @@ public class Tips : MonoBehaviour
     {
         currentScore = 0;
         currentTask = tips[currentTaskIndex];
-        Debug.Log(currentTaskIndex);
+
         ShowTextTip();
         StartPlayingAudioTips();
 
@@ -158,7 +159,8 @@ public class Tips : MonoBehaviour
 
     private void ShowTextTip()
     {
-        display.text = currentTask.text;
+        if(display != null)
+            display.text = currentTask.text;
     }
 
     private Coroutine lastAudioTipsCoroutine;

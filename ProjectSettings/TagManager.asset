@@ -18,9 +18,9 @@ TagManager:
   - DeviceModel
   - DeviceGrab
   - Teleportation
-  - 
-  - 
-  - 
+  - RightHandPhysics
+  - LeftHandPhysics
+  - NonPhysicsHand
   - 
   - 
   - 

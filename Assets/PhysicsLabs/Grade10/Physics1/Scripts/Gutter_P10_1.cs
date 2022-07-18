@@ -80,11 +80,19 @@ public class Gutter_P10_1 : MonoBehaviour
         Cylinder.Events.OnCollisionEntered.AddListener(CylinderHit);
 
         Cylinder.GetComponent<ConfigurableJoint>().connectedBody = rb;
+
+        StartCoroutine(MakeCylinderNonKinematic());
     }
 
     private void MakeCylinderKinematic(SelectExitEventArgs arg0)
     {
         Cylinder.Rb.isKinematic = true;
+    }
+    IEnumerator MakeCylinderNonKinematic()
+    {
+        yield return null;
+        yield return null;
+        Cylinder.Rb.isKinematic = false;
     }
 
     private void BallEntered(Ball_P10_1 ball)

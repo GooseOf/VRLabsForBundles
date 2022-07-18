@@ -4,7 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/PhysicsLabs/Grade10/Physics3/Scenes/Lab 3.unity
+    guid: c9831e9b2674e5848affe1b31cad9b30
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: b0cfec95a22e71b4f90fd27f9b1698e4, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 333437816d4f19c45bf412b73e878bdd, type: 2}

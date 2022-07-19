@@ -16,10 +16,7 @@ public class FollowHandByAxis : MonoBehaviour
     {
         if(Hand != null)
         {
-            var handLocalPos = trToCheck.InverseTransformPoint(Hand.position);
-            var trPos = trToMove.localPosition;
-            trPos.x = handLocalPos.x;
-            trToMove.localPosition = trPos;
+            TrToMove.position = Hand.position;
             limiter.Clamp();
         }
     }

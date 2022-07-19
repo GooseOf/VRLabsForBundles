@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Lapka : MonoBehaviour
 {
-    [SerializeField] private Transform lapka;
-    [SerializeField] private Transform lapkaPosition;
+    //[SerializeField] private Transform lapka;
+    //[SerializeField] private Transform lapkaPosition;
+    public void Check()
+    {
+        Debug.Log("On");
+    }
 }

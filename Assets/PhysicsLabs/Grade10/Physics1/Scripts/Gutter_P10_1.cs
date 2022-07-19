@@ -160,11 +160,11 @@ public class Gutter_P10_1 : MonoBehaviour
         {
             StopTrajectory();
 
+            OnCylinderHit.Invoke();
+
             var distance = (float)(int)(cylinderDistanceDisplayer.MultiplyedHigh * 1000) / 1000 + "ì";
             var time = stopwatch.GetStringTime();
             Table.AddRow(new List<string>() { Table.RowsCount + "", distance, time });
-
-            OnCylinderHit.Invoke();
         }
     }
 

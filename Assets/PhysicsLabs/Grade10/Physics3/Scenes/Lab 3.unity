@@ -3804,7 +3804,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 423788110}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.7670001, y: 0.56299996, z: -0.6966779}
+  m_LocalPosition: {x: 0.0758, y: 0.0424, z: -0.0001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 804369225}
@@ -9806,7 +9806,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1076518528}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.5, w: 0.8660254}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -9815,7 +9815,7 @@ Transform:
   - {fileID: 2098842127}
   m_Father: {fileID: 1529009410}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 60}
 --- !u!1 &1081839085
 GameObject:
   m_ObjectHideFlags: 0
@@ -13174,7 +13174,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1429621944
 Transform:
   m_ObjectHideFlags: 0
@@ -13182,14 +13182,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1429621943}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalRotation: {x: 0.5, y: 0.8660254, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0.0072, z: 0}
   m_LocalScale: {x: 0.11563592, y: 0.11563592, z: 0.11563592}
   m_Children:
   - {fileID: 2054727327}
   m_Father: {fileID: 1954775875}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 60}
 --- !u!114 &1429621945
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13873,6 +13873,36 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1486062919}
   m_Mesh: {fileID: -8656844318086323120, guid: 24843b462e89b9848a6232a556576508, type: 3}
+--- !u!1 &1486920435
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1486920436}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1486920436
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1486920435}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.026, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1541922131}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1494185704
 GameObject:
   m_ObjectHideFlags: 0
@@ -14120,10 +14150,10 @@ GameObject:
   - component: {fileID: 1529009409}
   - component: {fileID: 1529009408}
   - component: {fileID: 1529009407}
-  - component: {fileID: 1529009406}
   - component: {fileID: 1529009405}
   - component: {fileID: 1529009412}
   - component: {fileID: 1529009411}
+  - component: {fileID: 1529009406}
   m_Layer: 6
   m_Name: Lapka 2
   m_TagString: Gutter_P10_1
@@ -14152,14 +14182,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1529009404}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af0c05dff7f785645836df4f49a67992, type: 3}
+  m_Script: {fileID: 11500000, guid: 91700e96b97127c4bb1d11dbc4412654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tr: {fileID: 1529009410}
-  rb: {fileID: 1529009409}
-  trToCheckDistance: {fileID: 1529009410}
-  events: {fileID: 1529009405}
   interactable: {fileID: 1529009411}
+  handFollower: {fileID: 1541922137}
 --- !u!153 &1529009407
 ConfigurableJoint:
   m_ObjectHideFlags: 0
@@ -14292,7 +14319,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1529009404}
-  m_LocalRotation: {x: 0.640889, y: 0.7669324, z: -0.024595581, w: -0.02170493}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: -0.18300009, y: 0.021200001, z: -0.14067793}
   m_LocalScale: {x: 8.647834, y: 8.647833, z: 8.647834}
   m_Children:
@@ -14300,7 +14327,7 @@ Transform:
   - {fileID: 2118161254}
   m_Father: {fileID: 461260670}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0.568, y: 183.717, z: 79.786}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!114 &1529009411
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14336,7 +14363,19 @@ MonoBehaviour:
       m_Calls: []
   m_FirstSelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1541922137}
+        m_TargetAssemblyTypeName: FollowHandByAxis, Assembly-CSharp
+        m_MethodName: SelectEnter
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_LastSelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -14637,13 +14676,15 @@ GameObject:
   - component: {fileID: 1541922134}
   - component: {fileID: 1541922133}
   - component: {fileID: 1541922132}
+  - component: {fileID: 1541922136}
+  - component: {fileID: 1541922137}
   m_Layer: 0
   m_Name: Socket_Lapka
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1541922131
 Transform:
   m_ObjectHideFlags: 0
@@ -14651,14 +14692,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1541922130}
-  m_LocalRotation: {x: 0.524495, y: 0.85139424, z: 0.0007004461, w: 0.0056906273}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0.0091, z: 0}
   m_LocalScale: {x: 0.11563595, y: 0.11563595, z: 0.11563592}
   m_Children:
   - {fileID: 2003622528}
+  - {fileID: 1486920436}
   m_Father: {fileID: 1954775875}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: -0.568, y: 180, z: -57.786}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!114 &1541922132
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14716,18 +14758,6 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1541922133}
-        m_TargetAssemblyTypeName: ConnectBodies, Assembly-CSharp
-        m_MethodName: Connect
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1541922132}
         m_TargetAssemblyTypeName: ClearColliders, Assembly-CSharp
         m_MethodName: ChangeLayer
@@ -14739,6 +14769,78 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1541922136}
+        m_TargetAssemblyTypeName: TranslateLimiter, Assembly-CSharp
+        m_MethodName: LimitObject
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1529009410}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1541922136}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1541922137}
+        m_TargetAssemblyTypeName: FollowHandByAxis, Assembly-CSharp
+        m_MethodName: SetTrToMove
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1529009410}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1541922137}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1529009410}
+        m_TargetAssemblyTypeName: UnityEngine.Transform, UnityEngine
+        m_MethodName: SetParent
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1541922131}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1541922133}
+        m_TargetAssemblyTypeName: ConnectBodies, Assembly-CSharp
+        m_MethodName: Connect
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
         m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
@@ -14775,6 +14877,36 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.066274226, y: 0.0750711, z: 0.06537533}
   m_Center: {x: -0.0015483797, y: 0.0100005865, z: -0.003327787}
+--- !u!114 &1541922136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1541922130}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb8f2640ae37c2b46824e9b77fa3b779, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  limitedTr: {fileID: 0}
+  minValues: {x: 0, y: -0.026, z: 0}
+  maxValues: {x: 0, y: 0.079, z: 0}
+--- !u!114 &1541922137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1541922130}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5bb7b244df5d974ba058f781c3918d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trToCheck: {fileID: 1541922131}
+  trToMove: {fileID: 0}
+  limiter: {fileID: 1541922136}
 --- !u!1 &1545486283
 GameObject:
   m_ObjectHideFlags: 0
@@ -18238,7 +18370,6 @@ GameObject:
   - component: {fileID: 1954775875}
   - component: {fileID: 1954775876}
   - component: {fileID: 1954775877}
-  - component: {fileID: 1954775878}
   - component: {fileID: 1954775879}
   m_Layer: 6
   m_Name: Shtativ
@@ -18399,38 +18530,6 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
---- !u!114 &1954775878
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1954775874}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2655786d2ac29eb4d86ee5900cf2cde6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 1954775876}
-  cylinderSlider: {fileID: 1429621946}
-  cylinderLimiter: {fileID: 1429621947}
-  cylinderDistanceDisplayer: {fileID: 0}
-  handFollower: {fileID: 1429621945}
-  ballLimiter: {fileID: 0}
-  ballOffsetCylinder: {x: -0.01, y: 0, z: 0}
-  stopwatch: {fileID: 0}
-  OnTrajectoryStart:
-    m_PersistentCalls:
-      m_Calls: []
-  OnTrajectoryStop:
-    m_PersistentCalls:
-      m_Calls: []
-  OnCylinderHit:
-    m_PersistentCalls:
-      m_Calls: []
-  OnCylinderPlaced:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &1954775879
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20031,9 +20130,97 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1231814017}
+        m_TargetAssemblyTypeName: UnityEngine.XR.Interaction.Toolkit.XRGrabInteractable,
+          Unity.XR.Interaction.Toolkit
+        m_MethodName: set_trackPosition
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1231814017}
+        m_TargetAssemblyTypeName: UnityEngine.XR.Interaction.Toolkit.XRGrabInteractable,
+          Unity.XR.Interaction.Toolkit
+        m_MethodName: set_trackRotation
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1231814021}
+        m_TargetAssemblyTypeName: UnityEngine.Transform, UnityEngine
+        m_MethodName: SetParent
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2118161254}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1529009411}
+        m_TargetAssemblyTypeName: GrabInteractableWithoutParentChanging, Assembly-CSharp
+        m_MethodName: set_trackPosition
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1529009411}
+        m_TargetAssemblyTypeName: GrabInteractableWithoutParentChanging, Assembly-CSharp
+        m_MethodName: set_trackRotation
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1231814017}
+        m_TargetAssemblyTypeName: UnityEngine.XR.Interaction.Toolkit.XRGrabInteractable,
+          Unity.XR.Interaction.Toolkit
+        m_MethodName: set_trackPosition
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1231814017}
+        m_TargetAssemblyTypeName: UnityEngine.XR.Interaction.Toolkit.XRGrabInteractable,
+          Unity.XR.Interaction.Toolkit
+        m_MethodName: set_trackRotation
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   m_OnHoverEntered:
     m_PersistentCalls:
       m_Calls: []

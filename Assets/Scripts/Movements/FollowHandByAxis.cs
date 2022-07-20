@@ -20,7 +20,10 @@ public class FollowHandByAxis : MonoBehaviour
             limiter.Clamp();
         }
     }
-
+    public void SetTrToMove(Transform lapka)
+    {
+        trToMove = lapka;
+    }
     public void SelectEnter(SelectEnterEventArgs args)
     {
         Hand = args.interactorObject.transform;

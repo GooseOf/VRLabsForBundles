@@ -19,6 +19,11 @@ public class RotationsLimiter : MonoBehaviour
 
     private void LateUpdate()
     {
+        Limit();
+    }
+
+    public void Limit()
+    {
         switch (axis)
         {
             case Axis.X:

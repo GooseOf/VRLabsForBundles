@@ -21,7 +21,10 @@ public class TranslateLimiter : MonoBehaviour
     {
         Clamp();
     }
-
+    public void LimitObject(Transform objectLimit)
+    {
+        LimitedTr = objectLimit;
+    }
     public void Clamp()
     {
         Vector3 currentPosition = LimitedTr.localPosition;

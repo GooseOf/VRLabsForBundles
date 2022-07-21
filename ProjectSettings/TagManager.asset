@@ -7,6 +7,10 @@ TagManager:
   - Hand
   - Gutter_P10_1
   - P10_1_Cylinder
+  - ObjectsReturner
+  - Trigger
+  - Sea
+  - WaterDroplet
   layers:
   - Default
   - TransparentFX

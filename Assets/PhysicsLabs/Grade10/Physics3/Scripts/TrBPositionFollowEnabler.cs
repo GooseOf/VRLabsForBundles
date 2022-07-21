@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class TrBPositionFollowEnabler : MonoBehaviour
 {
@@ -21,17 +22,30 @@ public class TrBPositionFollowEnabler : MonoBehaviour
     
     private void OnTriggerEnter(Collider other)
     {
-        spherePos = true;
+        if (other.CompareTag("Trigger"))
+        {
+            spherePos = true;
+
+            OnTrigger.Invoke();
+        }        
     }
     private void OnCollisionEnter(Collision collision)
     {
         if (spherePos)
         {
             spherePos = false;
-            highDisplay.StartDisplayingDistance();
-            lengthDisplay.StartDisplayingDistance();
+
+            ShowDistance();
+
             AddRowToTable();
+
+            OnCollision.Invoke();
         }
+    }
+    private void ShowDistance()
+    {
+        highDisplay.StartDisplayingDistance();
+        if (lengthDisplay != null) { lengthDisplay.StartDisplayingDistance(); }
     }
     private void Update()
     {
@@ -47,5 +61,7 @@ public class TrBPositionFollowEnabler : MonoBehaviour
         double Length = Math.Round(lengthDisplay.Length, 3);
         List<string> columns = new List<string>() { High + "ì", time + "c", Length + "ì" };
         Table.AddRow(columns);
-    } 
+    }
+    [SerializeField] private UnityEvent OnTrigger;
+    [SerializeField] private UnityEvent OnCollision;
 }

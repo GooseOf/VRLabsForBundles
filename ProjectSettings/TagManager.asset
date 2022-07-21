@@ -11,11 +11,14 @@ TagManager:
   - Trigger
   - Sea
   - WaterDroplet
+  - Pushka
+  - hand
+  - WirePlug
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - mySphere
   - Water
   - UI
   - Device
@@ -25,7 +28,7 @@ TagManager:
   - RightHandPhysics
   - LeftHandPhysics
   - NonPhysicsHand
-  - 
+  - dulo
   - 
   - 
   - 

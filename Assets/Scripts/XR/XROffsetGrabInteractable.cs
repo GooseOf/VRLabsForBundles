@@ -12,7 +12,7 @@ public class XROffsetGrabInteractable : XRGrabInteractable
     {
         if (!attachTransform)
         {
-            GameObject grab = new GameObject("Garb Pivot");
+            GameObject grab = new GameObject("Grab Pivot");
             grab.transform.SetParent(transform, false);
             attachTransform = grab.transform;
         }
@@ -25,14 +25,9 @@ public class XROffsetGrabInteractable : XRGrabInteractable
     {
         if (args.interactorObject.transform.CompareTag("Hand"))
         {
-            if (args is SelectEnterEventArgs)
-            {
-                attachTransform.position = args.interactorObject.transform.position;
-                attachTransform.rotation = args.interactorObject.transform.rotation;
-            }
-            else
-            {
-            }
+
+            attachTransform.position = args.interactorObject.transform.position;
+            attachTransform.rotation = args.interactorObject.transform.rotation;
         }
         else
         {

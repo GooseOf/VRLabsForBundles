@@ -14319,7 +14319,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1529009404}
+<<<<<<< HEAD
+  m_LocalRotation: {x: 0.640889, y: 0.7669324, z: -0.024595581, w: -0.02170493}
+=======
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+>>>>>>> 4c991f8ff55f1ba0879da2fcc9ea8e818c56fc7a
   m_LocalPosition: {x: -0.18300009, y: 0.021200001, z: -0.14067793}
   m_LocalScale: {x: 8.647834, y: 8.647833, z: 8.647834}
   m_Children:
@@ -14327,7 +14331,11 @@ Transform:
   - {fileID: 2118161254}
   m_Father: {fileID: 461260670}
   m_RootOrder: 1
+<<<<<<< HEAD
+  m_LocalEulerAnglesHint: {x: 0.568, y: 183.717, z: 79.786}
+=======
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+>>>>>>> 4c991f8ff55f1ba0879da2fcc9ea8e818c56fc7a
 --- !u!114 &1529009411
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14696,7 +14704,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1541922131
 Transform:
   m_ObjectHideFlags: 0
@@ -18394,6 +18402,10 @@ GameObject:
   - component: {fileID: 1954775875}
   - component: {fileID: 1954775876}
   - component: {fileID: 1954775877}
+<<<<<<< HEAD
+  - component: {fileID: 1954775878}
+=======
+>>>>>>> 4c991f8ff55f1ba0879da2fcc9ea8e818c56fc7a
   - component: {fileID: 1954775879}
   m_Layer: 6
   m_Name: Shtativ
@@ -18566,6 +18578,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c1cb037c078ada42a7b96535bc27337, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
+  rb: {fileID: 1954775876}
+  cylinderSlider: {fileID: 1429621946}
+  cylinderLimiter: {fileID: 1429621947}
+  cylinderDistanceDisplayer: {fileID: 0}
+  handFollower: {fileID: 1429621945}
+  ballLimiter: {fileID: 0}
+  ballOffsetCylinder: {x: -0.01, y: 0, z: 0}
+  stopwatch: {fileID: 0}
+  OnTrajectoryStart:
+    m_PersistentCalls:
+      m_Calls: []
+  OnTrajectoryStop:
+    m_PersistentCalls:
+      m_Calls: []
+  OnCylinderHit:
+    m_PersistentCalls:
+      m_Calls: []
+  OnCylinderPlaced:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1954775879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1954775874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c1cb037c078ada42a7b96535bc27337, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+=======
+>>>>>>> 4c991f8ff55f1ba0879da2fcc9ea8e818c56fc7a
   tr: {fileID: 1954775875}
   rb: {fileID: 1954775876}
 --- !u!1 &1959945018

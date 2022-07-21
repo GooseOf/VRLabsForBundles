@@ -1,14 +1,9 @@
 fileFormatVersion: 2
-guid: 24843b462e89b9848a6232a556576508
+guid: 3aa94e876e06c684da82337e27c37041
 ModelImporter:
-  serializedVersion: 20200
+  serializedVersion: 21300
   internalIDToNameTable: []
   externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Celing
-    second: {fileID: 2100000, guid: fdc1e3e90e279e24b8bcd2637eb931f0, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -17,173 +12,113 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Floor
-    second: {fileID: 2100000, guid: 9adf0492ec256594b938b93c87b98ac0, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Frames_Curtains
-    second: {fileID: 2100000, guid: 5ff3091bacaec094a9ab464c36013562, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material
-    second: {fileID: 2100000, guid: 7606f919d8e46874ea9eff58e7cef7f4, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material.001
-    second: {fileID: 2100000, guid: 8899664f096ed8a4cb71f77369eac439, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Plakaty
-    second: {fileID: 2100000, guid: 79af182abe8cf4243ae6a29c6eb99de3, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: TV
-    second: {fileID: 2100000, guid: aaa6e90c931d34643ae4b0ed93b682ef, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: doors
-    second: {fileID: 2100000, guid: 936b8d3af40cfed49a91f772f3a181ca, type: 2}
+      name: Metal
+    second: {fileID: 2100000, guid: ac1d9ab719182fc46b7930b9cce70299, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: small_objects_doska
-    second: {fileID: 2100000, guid: 1c15b151060ed254d9b1aefcc5447e05, type: 2}
+    second: {fileID: 2100000, guid: 8d63003ad98fdb9438240d8443b6d51e, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: tables
-    second: {fileID: 2100000, guid: 5a44b9690b7d4214db7bffdf2776e8fe, type: 2}
+    second: {fileID: 2100000, guid: ca046810974b4764b902c186161c9993, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: vykluchateli
     second: {fileID: 2100000, guid: 87d6eb682f80f984585ac0c383578cbc, type: 2}
   - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: wall
-    second: {fileID: 2100000, guid: b3d84f3c7fc1db74d8f8fd6810aefd6d, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: window
-    second: {fileID: 2100000, guid: 6a4dbe0d446d4494c8c087dc4dd16b46, type: 2}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: CelingAlbedo-PhysicsClassroom2
-    second: {fileID: 2800000, guid: 966c5381a2c44924787588d303cee846, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: CelingEmisson-PhysicsClassroom2
-    second: {fileID: 2800000, guid: e818d6fe9f1ab5841a2f38cb1801dffb, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: CelingMetallic-PhysicsClassroom2
-    second: {fileID: 2800000, guid: 63a239742e0fc314c8fb696f29f830ca, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: CelingNormal-PhysicsClassroom2
-    second: {fileID: 2800000, guid: c7ab7d127a73a044190938906c6b536f, type: 3}
-  - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: DoorsBaked
-    second: {fileID: 2800000, guid: 63500060c1304ed4eb8b661b6523abbf, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: FloorAlbedo-PhysicsClassroom2
-    second: {fileID: 2800000, guid: 972324f7fb887254a962e4916d94dac5, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: FloorMetallic-PhysicsClassroom2
-    second: {fileID: 2800000, guid: 30158a7a6531122468a2c087defa1a1c, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: FloorNormal-PhysicsClassroom2
-    second: {fileID: 2800000, guid: b07de73f7f576c84a9334d6de7729619, type: 3}
+    second: {fileID: 2800000, guid: 5580b653dfc059541b28fd7f123c1c4e, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Frames_CurtainsAlbedo-PhysicsClassroom
-    second: {fileID: 2800000, guid: fadc82ddd04bc274fa9acf5fc3068d38, type: 3}
+    second: {fileID: 2800000, guid: 0f5df836a8fd4944ba8f4306aa591f12, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Frames_CurtainsMetallic-PhysicsClassroom
-    second: {fileID: 2800000, guid: 5e99aa1edec8e8f428bf694ff87e10bd, type: 3}
+    second: {fileID: 2800000, guid: 467b03a4173a8b24590acc9d5f661398, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: Frames_CurtainsNormal-PhysicsClassroom
-    second: {fileID: 2800000, guid: 44030f57551349e43af5301f5d8193b2, type: 3}
+    second: {fileID: 2800000, guid: a51c218d91caf924fa77e8498bd437f9, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
-      name: Oregon_High_School
-    second: {fileID: 2800000, guid: ac06197057ed6204aad7964c60f59de6, type: 3}
+      name: Metal011_4K_Color
+    second: {fileID: 2800000, guid: a75d6d2401924584b806a908a2b21406, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
-      name: PlakatyAlbedo-plakaty
-    second: {fileID: 2800000, guid: b93710256bf337d4ab65708608124f3e, type: 3}
+      name: Metal011_4K_NormalDX
+    second: {fileID: 2800000, guid: 48570fbab6ab79241af10ec12e0ebf4d, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
-      name: SmallObjectsBaked
-    second: {fileID: 2800000, guid: 5de67f42b108b1d4782f28e3cfa293a5, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: TVAlbedo-tv
-    second: {fileID: 2800000, guid: 419730b8b9983b34c8aa6b9737e72064, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: TVMetallic-tv
-    second: {fileID: 2800000, guid: 007f7890b7e731e4c9ee64a91fafb42f, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Trees_transparent
-    second: {fileID: 2800000, guid: 165736c577badbf47ad49ba0ce9e3b97, type: 3}
+      name: Metal011_4K_Roughness
+    second: {fileID: 2800000, guid: 25d3a366db4f06c489d374652639e4b8, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: chairsBaked
-    second: {fileID: 2800000, guid: db55ed79338f98d46a3948e5de6ad3b6, type: 3}
+    second: {fileID: 2800000, guid: dd1c3c61ddd0e8545acbc8d7debb12ff, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
-      name: tablesBaked
-    second: {fileID: 2800000, guid: 4939a6710abafda469bd398a0775f577, type: 3}
+      name: small_objects_doskaAlbedo-small_objects
+    second: {fileID: 2800000, guid: b99f32385c6709648aa13d2db8ca5308, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tablesAlbedo-tables
+    second: {fileID: 2800000, guid: bb0fb46247def224ca1e68be591229ca, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tablesMetallic-tables
+    second: {fileID: 2800000, guid: d0cdfcfda83a4c242bc5de2b2a7b58bb, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tablesNormal-tables
+    second: {fileID: 2800000, guid: e947e21a40e077c48a212a1bd626cd96, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vykluchateliAlbedo-tables
+    second: {fileID: 2800000, guid: 3c7f8c5485cd88a448eb84789275df35, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vykluchateliMetallic-tables
+    second: {fileID: 2800000, guid: 21bb21aee89b4bf418c6d4b6a0ed0f59, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: vykluchateliNormal-tables
+    second: {fileID: 2800000, guid: e9d44afa2f3f0d74faf0fa303485fa29, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: wallAlbedo-PhysicsClassroom2
-    second: {fileID: 2800000, guid: 0808bbae3042fed46848bafb6035d014, type: 3}
+    second: {fileID: 2800000, guid: d13ce8bd4f77d7f4d9042f68e7edd56c, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: wallMetallic-PhysicsClassroom2
-    second: {fileID: 2800000, guid: 28da7964fa430b4429dbde052f6a2bf2, type: 3}
+    second: {fileID: 2800000, guid: 73645aa4615fa954781cad639a738772, type: 3}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: wallNormal-PhysicsClassroom2
-    second: {fileID: 2800000, guid: aac3f6c92beb4e042b54d9f4a4b5b7ab, type: 3}
+    second: {fileID: 2800000, guid: 33bd494d76eb1a442958c9bf0cacca2c, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -194,6 +129,7 @@ ModelImporter:
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
+    removeConstantScaleCurves: 1
     motionNodeName: 
     rigImportErrors: 
     rigImportWarnings: 
@@ -223,6 +159,7 @@ ModelImporter:
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
+    nodeNameCollisionStrategy: 1
     fileIdsGeneration: 2
     swapUVChannels: 0
     generateSecondaryUV: 1
@@ -234,10 +171,11 @@ ModelImporter:
     skinWeightsMode: 0
     maxBonesPerVertex: 4
     minBoneWeight: 0.001
+    optimizeBones: 1
     meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
-    secondaryUVAreaDistortion: 15
+    secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVMarginMethod: 1
     secondaryUVMinLightmapResolution: 40
@@ -276,6 +214,7 @@ ModelImporter:
   humanoidOversampling: 1
   avatarSetup: 0
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
   additionalBone: 0
   userData: 
   assetBundleName: 

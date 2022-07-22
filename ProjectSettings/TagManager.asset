@@ -11,14 +11,20 @@ TagManager:
   - Trigger
   - Sea
   - WaterDroplet
-  - Pushka
-  - hand
   - WirePlug
+  - Battery
+  - Key
+  - Ammeter
+  - Voltmeter
+  - Resistor
+  - Diode
+  - LightBulb
+  - InactivePlug
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - mySphere
+  - 
   - Water
   - UI
   - Device
@@ -28,7 +34,7 @@ TagManager:
   - RightHandPhysics
   - LeftHandPhysics
   - NonPhysicsHand
-  - dulo
+  - InfoHolder
   - 
   - 
   - 

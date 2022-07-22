@@ -26,35 +26,33 @@ public class Wire : MonoBehaviour
         plugTwo.Outline.enabled = false;
     }
 
-    public void DisableNotConnectedPlugsTotal()
+    public void GiveInactiveTagToNotSelectedPlugs()
     {
         if (!plugOne.IsInSocket)
         {
-            plugOne.MakeOnlyHands();
-            plugOne.Outline.enabled = false;
-            plugOne.Grab.enabled = false;
+            plugOne.tag = "InactivePlug";
         }
         if (!plugTwo.IsInSocket)
         {
-            plugTwo.MakeOnlyHands();
-            plugTwo.Outline.enabled = false;
-            plugTwo.Grab.enabled = false;
+            plugTwo.tag = "InactivePlug";
         }
     }
 
-    public void EnableNotSelectedPlug()
+    public void OutlineNotSelectedPlugs()
     {
         if (!plugOne.IsInSocket)
         {
-            plugOne.ActivateInteractions();
             plugOne.Outline.enabled = true;
-            plugOne.Grab.enabled = true;
         }
         if (!plugTwo.IsInSocket)
         {
-            plugTwo.Grab.enabled = true;
             plugTwo.Outline.enabled = true;
-            plugTwo.ActivateInteractions();
         }
+    }
+
+    public void MakeActivteTag() 
+    {
+        plugOne.tag = "WirePlug";
+        plugTwo.tag = "WirePlug";
     }
 }

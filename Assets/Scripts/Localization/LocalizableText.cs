@@ -11,9 +11,9 @@ public class LocalizableText : MonoBehaviour
 
     private void Start()
     {
-        if (LanguageSingletone.CurrentLanguage == Language.Rus)
-            display.text = localization.Rus;
+        if (LanguageSingletone.CurrentLanguage == Language.Eng)
+            display.text = localization.Eng; 
         else
-            display.text = localization.Eng;
+            display.text = localization.Rus;
     }
 }

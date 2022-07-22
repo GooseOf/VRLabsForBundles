@@ -32,6 +32,9 @@ public class WireSocket : MonoBehaviour
     {
         socket.enabled = false;
         socket.selectExited.RemoveListener(DisableSocket);
+
+        plug.SelecExited(args);
+
         args.interactableObject.transform.GetComponentInChildren<Outline>().enabled = false;
         Tips.Instance.TaskComplete();
     }
@@ -41,13 +44,18 @@ public class WireSocket : MonoBehaviour
         plug.Wire.DisablePlugs();
     }
 
-    public void DisablePlugsTotal()
+    public void GiveInactiveTagToNotSelectedPlugs()
     {
-        plug.Wire.DisableNotConnectedPlugsTotal();
+        plug.Wire.GiveInactiveTagToNotSelectedPlugs();
     }
 
-    public void EnableNotConnectedPlugs()
+    public void OutlineNotSelectedPlugs()
     {
-        plug.Wire.EnableNotSelectedPlug();
+        plug.Wire.OutlineNotSelectedPlugs();
+    }
+
+    public void ActivatePlugs()
+    {
+        plug.Wire.MakeActivteTag();
     }
 }

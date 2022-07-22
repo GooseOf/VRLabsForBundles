@@ -13,10 +13,13 @@ public class WirePlug : MonoBehaviour
     [SerializeField] private Outline outline;
     [SerializeField] private Collider[] colliders;
 
+
+
     public bool IsInSocket { get;  private set; }
 
     public void SelectEntered(SelectEnterEventArgs args)
     {
+        Debug.Log("enter");
         if (!args.interactorObject.transform.CompareTag("Hand"))
         {
             IsInSocket = true;
@@ -32,6 +35,8 @@ public class WirePlug : MonoBehaviour
 
     public void SelecExited(SelectExitEventArgs args)
     {
+        Debug.Log("exit");
+
         for (int i = 0; i < colliders.Length; i++)
         {
             colliders[i].enabled = true;
@@ -43,11 +48,6 @@ public class WirePlug : MonoBehaviour
     public void DisableInteractions()
     {
         grab.interactionLayers = SamplesSingletone.InactiveLayerMask;
-    }
-
-    public void MakeOnlyHands()
-    {
-        grab.interactionLayers = SamplesSingletone.OnlyHands;
     }
 
     public void ActivateInteractions()

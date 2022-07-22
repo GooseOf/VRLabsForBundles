@@ -931,6 +931,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6134c999699df9c42bbbdb7569e06efe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  expectedColliders: []
+  onTriggerEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  onCollisionEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  onTriggerExited:
+    m_PersistentCalls:
+      m_Calls: []
+  onCollisionExited:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &63051468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2925,13 +2938,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 246755349}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.6975265, y: -0.152, z: -1.631}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.2585894, y: 0.6860003, z: -1.5210004}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 467439909}
   - {fileID: 1201991419}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 966258889}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &254374465
@@ -3811,7 +3824,7 @@ Transform:
   - {fileID: 1310405517}
   - {fileID: 63051461}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &423788112
 MonoBehaviour:
@@ -4267,8 +4280,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 461260669}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.584, y: 0.54179996, z: -0.556}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.14506286, y: 1.3798003, z: -0.44600034}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1954775875}
@@ -4276,7 +4289,7 @@ Transform:
   - {fileID: 344326721}
   - {fileID: 1231814021}
   - {fileID: 1137034276}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 966258889}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &461744613
@@ -4750,7 +4763,7 @@ Transform:
   m_LocalScale: {x: 0.02740025, y: 0.032588635, z: 1.5966835}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &507292326 stripped
 GameObject:
@@ -8915,7 +8928,7 @@ Transform:
   - {fileID: 1081839086}
   - {fileID: 1922588501}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &964498905 stripped
 GameObject:
@@ -8946,6 +8959,41 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 109434732388006827, guid: 7811abe38615a86438f679bcf79f5b92, type: 3}
   m_PrefabInstance: {fileID: 534429445}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &966258888
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 966258889}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &966258889
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 966258888}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.43893713, y: -0.8380003, z: -0.10999966}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1684185361}
+  - {fileID: 246755350}
+  - {fileID: 1327383932}
+  - {fileID: 461260670}
+  - {fileID: 1161194218}
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &991474982
 GameObject:
   m_ObjectHideFlags: 0
@@ -10330,7 +10378,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1161194216}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.43893713, y: -0.8380003, z: -0.10999966}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 191874235}
@@ -10338,8 +10386,8 @@ Transform:
   - {fileID: 2113080494}
   - {fileID: 442712104}
   - {fileID: 254374466}
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_Father: {fileID: 966258889}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1173250470
 GameObject:
@@ -12351,12 +12399,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1327383930}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.6975265, y: -0.152, z: -1.664}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.2585894, y: 0.6860003, z: -1.5540004}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1460702725}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 966258889}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1327383933
@@ -14142,6 +14190,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6134c999699df9c42bbbdb7569e06efe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  expectedColliders: []
+  onTriggerEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  onCollisionEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  onTriggerExited:
+    m_PersistentCalls:
+      m_Calls: []
+  onCollisionExited:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!153 &1529009407
 ConfigurableJoint:
   m_ObjectHideFlags: 0
@@ -15851,10 +15912,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1684185360}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.6359997, y: -0.6119354, z: -1.4378161}
+  m_LocalPosition: {x: -0.19706255, y: 0.22606492, z: -1.3278165}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 966258889}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1684185362
@@ -20304,7 +20365,16 @@ MonoBehaviour:
   highDisplay: {fileID: 0}
   lengthDisplay: {fileID: 0}
   stopwatch: {fileID: 0}
+  sphereRespawn: {fileID: 0}
+  sphereCurrent: {fileID: 0}
+  rbCurrent: {fileID: 0}
   spherePos: 0
+  onTriggerEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  onCollisionEnter:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &5680519944534050030
 Transform:
   m_ObjectHideFlags: 0

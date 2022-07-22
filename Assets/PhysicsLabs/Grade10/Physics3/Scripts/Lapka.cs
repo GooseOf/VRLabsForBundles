@@ -10,7 +10,6 @@ public class Lapka : MonoBehaviour
     [SerializeField] private Transform lapka;
     [SerializeField] private Transform lapkaPosition;
 //=======
-
     //public GrabInteractableWithoutParentChanging Interactable { get { return interactable; } }
     [SerializeField] private GrabInteractableWithoutParentChanging interactable;
     [SerializeField] private FollowHandByAxis handFollower;

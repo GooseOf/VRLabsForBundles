@@ -10,15 +10,12 @@ public class TrBPositionFollowEnabler : MonoBehaviour
     [SerializeField] private DistanceDisplayer highDisplay;
     [SerializeField] private DistanceDisplayer lengthDisplay;
     [SerializeField] private Stopwatch stopwatch;
-    public bool spherePos;
+    [SerializeField] private Transform sphereRespawn;
+    [SerializeField] private Transform sphereCurrent;
+    [SerializeField] private Rigidbody rbCurrent;
 
-    private void Start()
-    {
-        //highDisplay = transform.parent.parent.GetChild(3).GetComponent<DistanceDisplayer>();
-        //lengthDisplay = transform.parent.parent.GetChild(4).GetComponent<DistanceDisplayer>();
-        //stopwatch = FindObjectOfType<Stopwatch>();
-        //TrB = transform.parent.parent.GetChild(2);        
-    }
+    public bool spherePos;
+    //private bool onBottom;
     
     private void OnTriggerEnter(Collider other)
     {
@@ -26,12 +23,30 @@ public class TrBPositionFollowEnabler : MonoBehaviour
         {
             spherePos = true;
 
-            OnTrigger.Invoke();
-        }        
+            onTriggerEnter.Invoke();
+
+            Debug.Log("Trigger");
+        }
+        if (other.CompareTag("Sea"))
+        {
+            //onBottom = true;
+
+            spherePos = false;
+
+            ShowDistance();
+
+            AddRowToTable();
+
+            onCollisionEnter.Invoke();
+
+            sphereCurrent.position = sphereRespawn.position;
+            rbCurrent.velocity = Vector3.zero;
+            rbCurrent.angularVelocity = Vector3.zero;
+        }
     }
-    private void OnCollisionEnter(Collision collision)
+    /*private void OnCollisionEnter(Collision collision)
     {
-        if (spherePos)
+        if (spherePos && onBottom)
         {
             spherePos = false;
 
@@ -39,9 +54,14 @@ public class TrBPositionFollowEnabler : MonoBehaviour
 
             AddRowToTable();
 
-            OnCollision.Invoke();
+            onCollisionEnter.Invoke();
+
+            sphereCurrent.position = sphereRespawn.position;
+            Debug.Log("Collision");
         }
-    }
+        
+        
+    }*/
     private void ShowDistance()
     {
         highDisplay.StartDisplayingDistance();
@@ -51,17 +71,26 @@ public class TrBPositionFollowEnabler : MonoBehaviour
     {
         if (spherePos)
         {
-            TrB.position = transform.position;
+            TrB.position = transform.position + new Vector3(0, -0.1f, 0);
         }
     }
     private void AddRowToTable()
     {
         double time = Math.Round(stopwatch.MeasuredTime, 2);
         double High = Math.Round(highDisplay.High, 3);
-        double Length = Math.Round(lengthDisplay.Length, 3);
-        List<string> columns = new List<string>() { High + "ì", time + "c", Length + "ì" };
-        Table.AddRow(columns);
+        if (lengthDisplay != null)
+        {
+            double Length = Math.Round(lengthDisplay.Length, 3);
+            List<string> columns = new List<string>() { High + "ì", time + "c", Length + "ì" };
+            Table.AddRow(columns);
+        }
+        else
+        {
+            List<string> columns = new List<string>() { High + "ì", time + "c" };
+            Table.AddRow(columns);
+        }
+        
     }
-    [SerializeField] private UnityEvent OnTrigger;
-    [SerializeField] private UnityEvent OnCollision;
+    [SerializeField] private UnityEvent onTriggerEnter;
+    [SerializeField] private UnityEvent onCollisionEnter;
 }

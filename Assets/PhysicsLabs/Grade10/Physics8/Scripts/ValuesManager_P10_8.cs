@@ -14,8 +14,6 @@ public class ValuesManager_P10_8 : MonoBehaviour
 
     public void OpenCircuit()
     {
-        Tips.Instance.TaskComplete();
-
         ammeter.Voltage = 0;
         ammeter.CurrentResistance = ammeter.Resistance;
 
@@ -33,11 +31,6 @@ public class ValuesManager_P10_8 : MonoBehaviour
 
         diode.Voltage = 0;
         diode.CurrentResistance = diode.Resistance;
-    }
-
-    public void ActivateKey()
-    {
-        key.ActivateKey();
     }
 
     public void AddResistorListener()
@@ -85,14 +78,12 @@ public class ValuesManager_P10_8 : MonoBehaviour
     public void AddLightBulbListener()
     {
         key.OnClose.AddListener(CloseLightBulbCircuit);
-        key.ActivateKey();
         battery.OnOwnVoltageChange.AddListener(AddVoltageToLightBulbCircuit);
     }
 
     public void RemoveLightBulbListener()
     {
         key.OnClose.RemoveListener(CloseLightBulbCircuit);
-        key.ActivateKey();
         battery.OnOwnVoltageChange.RemoveListener(AddVoltageToLightBulbCircuit);
     }
 
@@ -130,14 +121,12 @@ public class ValuesManager_P10_8 : MonoBehaviour
     public void AddDiodeListener()
     {
         key.OnClose.AddListener(CloseDiodeCircuit);
-        key.ActivateKey();
         battery.OnOwnVoltageChange.AddListener(AddVoltageToDiodeCircuit);
     }
 
     public void RemoveDiodeListener()
     {
         key.OnClose.RemoveListener(CloseDiodeCircuit);
-        key.ActivateKey();
         battery.OnOwnVoltageChange.RemoveListener(AddVoltageToDiodeCircuit);
     }
 
@@ -182,14 +171,12 @@ public class ValuesManager_P10_8 : MonoBehaviour
     public void AddDiodeListenerAriphmetic()
     {
         key.OnClose.AddListener(CloseDiodeCircuitAriphmetic);
-        key.ActivateKey();
         battery.OnOwnVoltageChange.AddListener(AddVoltageToDiodeCircuitAriphmetic);
     }
 
     public void RemoveDiodeListenerAriphmetic()
     {
         key.OnClose.RemoveListener(CloseDiodeCircuitAriphmetic);
-        key.ActivateKey();
         battery.OnOwnVoltageChange.RemoveListener(AddVoltageToDiodeCircuitAriphmetic);
     }
 

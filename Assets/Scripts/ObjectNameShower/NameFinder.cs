@@ -23,11 +23,10 @@ public class NameFinder : MonoBehaviour
 
     void Update()
     {
-        RaycastHit hit;
-        if (Physics.Raycast(origin.position, origin.forward, out hit, raycastingDistance, layerMask))
+        if (Physics.Raycast(origin.position, origin.forward, out RaycastHit hit, raycastingDistance, layerMask))
         {
             ObjectInfoHolder infoHolder = hit.collider.GetComponent<ObjectInfoHolder>();
-
+            Debug.Log("Shar");
             ShowInfoPanel(hit, infoHolder);
         }
         else

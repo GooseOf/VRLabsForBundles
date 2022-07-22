@@ -13,9 +13,48 @@ public class Wire : MonoBehaviour
     {
         if(plugOne.IsInSocket && plugTwo.IsInSocket)
         {
-            plugOne.DisableInteractions();
-            plugTwo.DisableInteractions();
+            DisablePlugs();
             Tips.Instance.TaskComplete();
+        }
+   }
+
+    public void DisablePlugs()
+    {
+        plugOne.DisableInteractions();
+        plugOne.Outline.enabled = false;
+        plugTwo.DisableInteractions();
+        plugTwo.Outline.enabled = false;
+    }
+
+    public void DisableNotConnectedPlugsTotal()
+    {
+        if (!plugOne.IsInSocket)
+        {
+            plugOne.MakeOnlyHands();
+            plugOne.Outline.enabled = false;
+            plugOne.Grab.enabled = false;
+        }
+        if (!plugTwo.IsInSocket)
+        {
+            plugTwo.MakeOnlyHands();
+            plugTwo.Outline.enabled = false;
+            plugTwo.Grab.enabled = false;
+        }
+    }
+
+    public void EnableNotSelectedPlug()
+    {
+        if (!plugOne.IsInSocket)
+        {
+            plugOne.ActivateInteractions();
+            plugOne.Outline.enabled = true;
+            plugOne.Grab.enabled = true;
+        }
+        if (!plugTwo.IsInSocket)
+        {
+            plugTwo.Grab.enabled = true;
+            plugTwo.Outline.enabled = true;
+            plugTwo.ActivateInteractions();
         }
     }
 }

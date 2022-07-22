@@ -1545,7 +1545,7 @@ Transform:
   m_Children:
   - {fileID: 1609396137}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &225004643
 MonoBehaviour:
@@ -1626,13 +1626,11 @@ Transform:
   m_Children:
   - {fileID: 3539061786639819035}
   - {fileID: 4452401107756636446}
-  - {fileID: 3842425329993022946}
   - {fileID: 4223326180141066853}
   - {fileID: 4750312360070597902}
-  - {fileID: 8623007523637488511}
   - {fileID: 2490093260823232652}
   m_Father: {fileID: 680876731}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &289922769
 BoxCollider:
@@ -3047,7 +3045,7 @@ Transform:
   - {fileID: 1682734787}
   - {fileID: 1810763676}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &644667538
 GameObject:
@@ -3259,7 +3257,7 @@ Transform:
   m_Children:
   - {fileID: 1063388492}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &680876730
 GameObject:
@@ -3288,10 +3286,9 @@ Transform:
   m_LocalPosition: {x: 0.07668978, y: -6.320219, z: 14.917297}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1485361303}
   - {fileID: 282537542}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &695916215
 GameObject:
@@ -4049,7 +4046,7 @@ Transform:
   m_Children:
   - {fileID: 809653151}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &858243680
 GameObject:
@@ -6755,7 +6752,7 @@ RectTransform:
   - {fileID: 2134368239}
   - {fileID: 5468682326221591233}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -7425,7 +7422,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1449832509
 Transform:
   m_ObjectHideFlags: 0
@@ -7440,7 +7437,7 @@ Transform:
   - {fileID: 721488530}
   - {fileID: 73645682}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1479856310
 GameObject:
@@ -7570,7 +7567,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1485361302}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.5156269, y: 5.4822187, z: -15.027297}
+  m_LocalPosition: {x: -0.43893713, y: -0.8380003, z: -0.10999966}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 437375222}
@@ -7578,8 +7575,8 @@ Transform:
   - {fileID: 166756764}
   - {fileID: 654692084}
   - {fileID: 644667539}
-  m_Father: {fileID: 680876731}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1485361304
 BoxCollider:
@@ -7624,7 +7621,7 @@ Transform:
   - {fileID: 12658182}
   - {fileID: 1771948562}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1502544570
 GameObject:
@@ -7674,6 +7671,67 @@ MonoBehaviour:
   forceStartingDelay: 0
   currentScore: 0
   tips:
+  - text: "\u0423\u0441\u0442\u0430\u043D\u043E\u0432\u0438\u0442\u0435 \u0436\u0435\u043B\u043E\u0431
+      \u043D\u0430 \u0448\u0442\u0430\u0442\u0438\u0432"
+    header: 
+    audioTips: []
+    startingEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 453172778}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+        - m_Target: {fileID: 8067572498641418105}
+          m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+          m_MethodName: set_enabled
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+    endingEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 453172778}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 8067572498641418105}
+          m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+          m_MethodName: set_enabled
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    taskScore: 1
+    isStart: 0
+    localization: {fileID: 11400000, guid: 606ac1c7cb123544cad6428f8afe8bfd, type: 2}
   - text: "\u0423\u0441\u0442\u0430\u043D\u043E\u0432\u0438\u0442\u0435 \u0446\u0438\u043B\u0438\u043D\u0434\u0440
       \u043D\u0430 \u0436\u0435\u043B\u043E\u0431"
     header: 
@@ -7747,67 +7805,6 @@ MonoBehaviour:
     taskScore: 1
     isStart: 0
     localization: {fileID: 11400000, guid: 65682939648c7db40af4acf6301a0509, type: 2}
-  - text: "\u0423\u0441\u0442\u0430\u043D\u043E\u0432\u0438\u0442\u0435 \u0436\u0435\u043B\u043E\u0431
-      \u043D\u0430 \u0448\u0442\u0430\u0442\u0438\u0432"
-    header: 
-    audioTips: []
-    startingEvent:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 453172778}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 1
-          m_CallState: 2
-        - m_Target: {fileID: 8067572498641418105}
-          m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-          m_MethodName: set_enabled
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 1
-          m_CallState: 2
-    endingEvent:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 453172778}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 8067572498641418105}
-          m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-          m_MethodName: set_enabled
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    taskScore: 1
-    isStart: 0
-    localization: {fileID: 11400000, guid: 606ac1c7cb123544cad6428f8afe8bfd, type: 2}
   - text: "\u041F\u043E\u0441\u0442\u0430\u0432\u044C\u0442\u0435 \u0448\u0430\u0440\u0438\u043A
       \u0432 \u043D\u0430\u0447\u0430\u043B\u043E \u0436\u0435\u043B\u043E\u0431\u0430
       \u0438 \u043F\u043E\u043B\u0443\u0447\u0438\u0442\u0435 \u0440\u0435\u0437\u0443\u043B\u044C\u0442\u0430\u0442"
@@ -7901,6 +7898,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  LabEnding:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1504353373
 GameObject:
   m_ObjectHideFlags: 0
@@ -10445,6 +10445,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6134c999699df9c42bbbdb7569e06efe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  expectedColliders: []
+  onTriggerEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  onCollisionEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  onTriggerExited:
+    m_PersistentCalls:
+      m_Calls: []
+  onCollisionExited:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1682734784
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10895,7 +10908,7 @@ Transform:
   - {fileID: 1502544571}
   - {fileID: 82035979}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1810763675
 GameObject:
@@ -13064,8 +13077,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 325665902198092873}
-  m_LocalRotation: {x: -0, y: 0.86208403, z: -0, w: 0.5067654}
-  m_LocalPosition: {x: 5.898799, y: 3.2640069, z: -3.6289525}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 325665902900135833}
@@ -13677,8 +13690,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 325665902216692163}
-  m_LocalRotation: {x: -0, y: 0.86208403, z: -0, w: 0.5067654}
-  m_LocalPosition: {x: 5.898799, y: 3.2640069, z: -3.6289525}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 325665902446266427}
@@ -13905,7 +13918,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &325665902620513672
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14809,7 +14822,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &325665903065368529
 Transform:
   m_ObjectHideFlags: 0
@@ -17489,7 +17502,7 @@ Transform:
   - {fileID: 2442507253419756299}
   - {fileID: 5194649084696311097}
   m_Father: {fileID: 282537542}
-  m_RootOrder: 6
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2497860010594964684
 Transform:
@@ -19546,11 +19559,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3842425329993022944}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 17.372936, y: -4.1019354, z: -7.1978164}
+  m_LocalPosition: {x: -0.6360006, y: -0.6119356, z: -1.4378166}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 282537542}
-  m_RootOrder: 2
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3855840987547506564
 MeshFilter:
@@ -19994,7 +20007,7 @@ Transform:
   - {fileID: 5457702353819797223}
   - {fileID: 2127792085784948053}
   m_Father: {fileID: 282537542}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4247796003478148640
 MeshFilter:
@@ -20640,7 +20653,7 @@ Transform:
   m_Children:
   - {fileID: 4750312359530368468}
   m_Father: {fileID: 282537542}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4769330535044610302
 GameObject:
@@ -26702,11 +26715,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8623007523637488507}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.402735, y: -5.9143066, z: -7.4769073}
+  m_LocalPosition: {x: -7.606202, y: -2.4243069, z: -1.7169075}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 282537542}
-  m_RootOrder: 5
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8660619528736435270
 MeshFilter:

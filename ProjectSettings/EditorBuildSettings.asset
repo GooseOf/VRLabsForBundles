@@ -8,7 +8,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/PhysicsLabs/Grade10/Physics3/Scenes/Lab 3.unity
     guid: c9831e9b2674e5848affe1b31cad9b30
-  - enabled: 1
+  - enabled: 0
     path: Assets/Import/Environment_20.07/Env.unity
     guid: 56f45e0a727b9a3449c032fe4c812216
   m_configObjects:

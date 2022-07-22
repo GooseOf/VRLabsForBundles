@@ -14,9 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Rus:
     text: "\u0423\u0441\u0442\u0430\u043D\u043E\u0432\u0438\u0442\u0435 \u0436\u0435\u043B\u043E\u0431
-      \u043D\u0430 \u0446\u0438\u043B\u0438\u043D\u0434\u0440"
+      \u043D\u0430 \u0448\u0442\u0430\u0442\u0438\u0432"
     header: 
-    audioTips: []
+    audioTips:
+    - {fileID: 8300000, guid: 5cb3ef476d2bbae40852699a17d45b22, type: 3}
   Eng:
     text: 
     header: 

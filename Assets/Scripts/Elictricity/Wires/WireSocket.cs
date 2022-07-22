@@ -5,7 +5,8 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class WireSocket : MonoBehaviour
 {
-    private Transform plug;
+    private Transform plugTr;
+    private WirePlug plug;
     [SerializeField] private SocketWithTagCheck socket;
 
     private void Start()
@@ -15,14 +16,14 @@ public class WireSocket : MonoBehaviour
 
     public void OnSelectEntered(SelectEnterEventArgs args)
     {
-        plug = args.interactableObject.transform;
+        plugTr = args.interactableObject.transform;
+        plug = plugTr.GetComponent<WirePlug>();
     }
 
     public void EnablePlug()
     {
-        var plugComp = plug.GetComponent<WirePlug>();
-        plugComp.Outline.enabled = true;
-        plugComp.ActivateInteractions();
+        plug.Outline.enabled = true;
+        plug.ActivateInteractions();
 
         socket.selectExited.AddListener(DisableSocket);
     }
@@ -30,7 +31,23 @@ public class WireSocket : MonoBehaviour
     public void DisableSocket(SelectExitEventArgs args)
     {
         socket.enabled = false;
+        socket.selectExited.RemoveListener(DisableSocket);
         args.interactableObject.transform.GetComponentInChildren<Outline>().enabled = false;
         Tips.Instance.TaskComplete();
+    }
+
+    public void DisablePlugs()
+    {
+        plug.Wire.DisablePlugs();
+    }
+
+    public void DisablePlugsTotal()
+    {
+        plug.Wire.DisableNotConnectedPlugsTotal();
+    }
+
+    public void EnableNotConnectedPlugs()
+    {
+        plug.Wire.EnableNotSelectedPlug();
     }
 }

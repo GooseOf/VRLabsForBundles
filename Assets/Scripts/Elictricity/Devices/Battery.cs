@@ -13,7 +13,7 @@ public class Battery : ElectricDevice
 
     public UnityEvent OnOwnVoltageChange;
 
-    public void AddVoltage(float value)
+    public void SetVoltage(float value)
     {
         ownVoltage = value * 2;
         display.text = ownVoltage + "V";

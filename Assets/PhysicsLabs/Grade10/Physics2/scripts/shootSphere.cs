@@ -39,7 +39,7 @@ public class shootSphere : MonoBehaviour
             _sphere.eulerAngles = Vector3.zero;
             _sphere.gameObject.SetActive(true);
             _sphere.GetComponent<sphere>().shooted = true;
-            _sphere.GetComponent<Rigidbody>().AddForce(dulo.right * force);
+            _sphere.GetComponent<Rigidbody>().AddForce(dulo.right * (force + Random.RandomRange(0,20)));
             GetComponent<AudioSource>().Play();
 
             sphereStartPos.gameObject.SetActive(false);

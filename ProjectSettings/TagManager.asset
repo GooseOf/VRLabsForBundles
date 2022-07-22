@@ -11,6 +11,15 @@ TagManager:
   - Trigger
   - Sea
   - WaterDroplet
+  - WirePlug
+  - Battery
+  - Key
+  - Ammeter
+  - Voltmeter
+  - Resistor
+  - Diode
+  - LightBulb
+  - InactivePlug
   layers:
   - Default
   - TransparentFX
@@ -25,7 +34,7 @@ TagManager:
   - RightHandPhysics
   - LeftHandPhysics
   - NonPhysicsHand
-  - 
+  - InfoHolder
   - 
   - 
   - 

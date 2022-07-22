@@ -2353,7 +2353,7 @@ GameObject:
   - component: {fileID: 534076882}
   - component: {fileID: 534076884}
   - component: {fileID: 534076883}
-  m_Layer: 10
+  m_Layer: 13
   m_Name: GrabCollider1 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2863,7 +2863,7 @@ MonoBehaviour:
   origin: {fileID: 1207177835}
   layerMask:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 8192
   raycastingDistance: 0.075
   panelGO: {fileID: 1163153578}
   panelTr: {fileID: 1163153579}
@@ -3196,7 +3196,7 @@ GameObject:
   - component: {fileID: 806152845}
   - component: {fileID: 806152847}
   - component: {fileID: 806152846}
-  m_Layer: 10
+  m_Layer: 13
   m_Name: GrabCollider1 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3388,7 +3388,7 @@ GameObject:
   - component: {fileID: 836433704}
   - component: {fileID: 836433706}
   - component: {fileID: 836433705}
-  m_Layer: 10
+  m_Layer: 13
   m_Name: GrabCollider1 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5567,7 +5567,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1222975529}
-  m_Layer: 10
+  m_Layer: 13
   m_Name: Info
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7439,7 +7439,7 @@ GameObject:
   - component: {fileID: 1529627210}
   - component: {fileID: 1529627212}
   - component: {fileID: 1529627211}
-  m_Layer: 10
+  m_Layer: 13
   m_Name: Info
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9022,7 +9022,7 @@ GameObject:
   - component: {fileID: 1847547715}
   - component: {fileID: 1847547717}
   - component: {fileID: 1847547716}
-  m_Layer: 10
+  m_Layer: 13
   m_Name: Info
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9585,7 +9585,7 @@ MonoBehaviour:
   origin: {fileID: 1557643276}
   layerMask:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 8192
   raycastingDistance: 0.075
   panelGO: {fileID: 2086909347}
   panelTr: {fileID: 2086909348}
@@ -10010,7 +10010,7 @@ GameObject:
   - component: {fileID: 1940109189}
   - component: {fileID: 1940109191}
   - component: {fileID: 1940109190}
-  m_Layer: 10
+  m_Layer: 13
   m_Name: Info
   m_TagString: Untagged
   m_Icon: {fileID: 0}

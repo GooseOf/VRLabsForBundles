@@ -44,7 +44,6 @@ public class TableListener : MonoBehaviour
         rightRowAdded += 1;
         OnRightRowAdded.Invoke();
 
-        Debug.Log(rightRowAdded + " " + neededRowsCount);
         if (rightRowAdded == neededRowsCount)
         {
             Tips.Instance.TaskComplete();

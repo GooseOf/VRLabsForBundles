@@ -18,6 +18,7 @@ public class Stopwatch : MonoBehaviour
 
     public void StopWatchStart()
     {
+        StopWatchReset();
         StartCoroutine("StopWatch");
     }
     public void StopWatchStop()

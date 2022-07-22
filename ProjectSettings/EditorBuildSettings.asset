@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/PhysicsLabs/Grade10/Physics5/Scenes/Lab5.unity
     guid: 76aa9e79a35634a43aa982e7a224ec61
   m_configObjects:

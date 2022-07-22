@@ -18,9 +18,10 @@ public class pushkaAngle : MonoBehaviour
     public GameObject canvas;
     public Text ugolTxt;
     public float ugolTimer;
+
+    
     void Start()
     {
-
         List<InputDevice> devices = new List<InputDevice>();
         InputDeviceCharacteristics rightControllerCharacteristics = InputDeviceCharacteristics.Right | InputDeviceCharacteristics.Controller;
         InputDevices.GetDevicesWithCharacteristics(rightControllerCharacteristics, devices);
@@ -131,5 +132,7 @@ public class pushkaAngle : MonoBehaviour
         ugolTxt.text = ugol + "°";
 
     }
+
+
 
 }

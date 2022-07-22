@@ -18,11 +18,11 @@ public class shootSphere : MonoBehaviour
         List<InputDevice> devices = new List<InputDevice>();
         InputDeviceCharacteristics rightControllerCharacteristics = InputDeviceCharacteristics.Right | InputDeviceCharacteristics.Controller;
         InputDevices.GetDevicesWithCharacteristics(rightControllerCharacteristics, devices);
-
         if (devices.Count > 0)
         {
             targetDevice = devices[0];
         }
+        Debug.Log(devices.Count);
     }
 
     void Update()
@@ -31,9 +31,16 @@ public class shootSphere : MonoBehaviour
         if (triggerButtonValue > 0.9f && isCharged && transform.parent == null)
         {
             Debug.Log("shooted");
+
+            _sphere.GetComponent<Rigidbody>().velocity = Vector3.zero;
+            _sphere.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
+
             _sphere.position = sphereStartPos.position;
+            _sphere.eulerAngles = Vector3.zero;
             _sphere.gameObject.SetActive(true);
+            _sphere.GetComponent<sphere>().shooted = true;
             _sphere.GetComponent<Rigidbody>().AddForce(dulo.right * force);
+            GetComponent<AudioSource>().Play();
 
             sphereStartPos.gameObject.SetActive(false);
 

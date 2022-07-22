@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class TableRow : MonoBehaviour
 {
+    public List<string> Columns { get { return columns; } }
     private List<string> columns = new List<string>();
     [SerializeField] private TableColumn columnSample;
     [SerializeField] private Transform tr;

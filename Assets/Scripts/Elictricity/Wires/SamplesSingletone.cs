@@ -20,4 +20,7 @@ public class SamplesSingletone : MonoBehaviour
 
     public static InteractionLayerMask ActiveLayerMask { get { return Instance.activeLayerMask; } }
     [SerializeField] private InteractionLayerMask activeLayerMask;
+
+    public static InteractionLayerMask OnlyHands { get { return Instance.onlyHands; } }
+    [SerializeField] private InteractionLayerMask onlyHands;
 }

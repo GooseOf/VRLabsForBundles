@@ -3,7 +3,12 @@ guid: 1fad4960702d7494da2278cdb8e4c34c
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: teleport_blue
+    second: {fileID: 2100000, guid: 06d6944b05543fc41bf84e78b917a4cd, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

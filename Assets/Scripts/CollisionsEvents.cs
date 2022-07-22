@@ -21,7 +21,6 @@ public class CollisionsEvents : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other + " " + expectedColliders[0]);
         if (IsExpectedCollider(other))
             OnTriggerEntered.Invoke(other);
     }

@@ -18,7 +18,8 @@ MonoBehaviour:
       \u0436\u0435\u043B\u043E\u0431\u0430 \u0438 \u043F\u043E\u043B\u0443\u0447\u0438\u0442\u0435
       \u0440\u0435\u0437\u0443\u043B\u044C\u0442\u0430\u0442"
     header: 
-    audioTips: []
+    audioTips:
+    - {fileID: 8300000, guid: fa87434000878e64d80604be00a14b6d, type: 3}
   Eng:
     text: 
     header: 

@@ -5,7 +5,9 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class WirePlug : MonoBehaviour
 {
+    public Wire Wire { get { return wire; } }
     [SerializeField] private Wire wire;
+    public XRGrabInteractable Grab { get { return grab; } }
     [SerializeField] private XRGrabInteractable grab;
     public Outline Outline { get { return outline; } }
     [SerializeField] private Outline outline;
@@ -35,15 +37,17 @@ public class WirePlug : MonoBehaviour
             colliders[i].enabled = true;
         }
 
-        if (!args.interactorObject.transform.CompareTag("Hand"))
-        {
-            IsInSocket = false;
-        }
+        IsInSocket = false;
     }
 
     public void DisableInteractions()
     {
         grab.interactionLayers = SamplesSingletone.InactiveLayerMask;
+    }
+
+    public void MakeOnlyHands()
+    {
+        grab.interactionLayers = SamplesSingletone.OnlyHands;
     }
 
     public void ActivateInteractions()

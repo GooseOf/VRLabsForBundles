@@ -6,6 +6,7 @@ using UnityEngine.Events;
 
 public class TableListener : MonoBehaviour
 {
+    public int NeededRowsCount { set { neededRowsCount = value; } }
     [SerializeField] private int neededRowsCount;
     [SerializeField] private int[] parametersIndexToBeDifferent;
     private int rightRowAdded;
@@ -13,6 +14,13 @@ public class TableListener : MonoBehaviour
 
     private void Start()
     {
+        PrepareListener();
+    }
+
+    public void PrepareListener()
+    {
+        rightRowAdded = 0;
+
         InitializeUsedParameters();
         Table.Instance.OnRowAdded.AddListener(OnAddedRowToTable);
     }
@@ -20,7 +28,7 @@ public class TableListener : MonoBehaviour
     private void InitializeUsedParameters()
     {
         usedParameters = new List<string>[parametersIndexToBeDifferent.Length];
-        for(int i = 0; i  < usedParameters.Length; i++)
+        for (int i = 0; i < usedParameters.Length; i++)
         {
             usedParameters[i] = new List<string>();
         }
@@ -36,10 +44,12 @@ public class TableListener : MonoBehaviour
         rightRowAdded += 1;
         OnRightRowAdded.Invoke();
 
+        Debug.Log(rightRowAdded + " " + neededRowsCount);
         if (rightRowAdded == neededRowsCount)
         {
             Tips.Instance.TaskComplete();
             Table.Instance.OnRowAdded.RemoveListener(OnAddedRowToTable);
+            LabEnding.Invoke();
         }
     }
 
@@ -63,4 +73,5 @@ public class TableListener : MonoBehaviour
     }
 
     [SerializeField] private UnityEvent OnRightRowAdded;
+    [SerializeField] private UnityEvent LabEnding;
 }
